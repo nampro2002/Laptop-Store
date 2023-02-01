@@ -225,21 +225,25 @@ function Navbar() {
           )}
         </Stack>
       </Stack>
-      <Box
-        bgcolor="#000"
-        height="800px"
+      <Box        
+        height="600px"
         width="100%"
         sx={{
-          transform: "rotate(-7deg)",
           position: "absolute",
-          top: "-240px",
-          right: "-8%",
+          top: "0",
+          right: "0",
           zIndex: "-1",
           // borderBottomLeftRadius: "240px",
         }}
       >
-        bgcarosel
-      </Box>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"
+          alt=""
+          width="100%"
+          height="100%"
+          style={{ clipPath: "polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 100% 100%, 67% 89%, 23% 92%, 16% 82%, 0% 85%)" }}
+        />
+      </Box>      
       <div>
         <Modal
           open={open}

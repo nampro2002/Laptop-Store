@@ -5,6 +5,7 @@ import Cart from "./pages/Cart";
 import CheckoutHistory from "./pages/CheckoutHistory";
 import ConfirmCart from "./pages/ConfrimCart";
 import FinalCheckOut from "./pages/FinalCheckOut";
+import MediaQuery from "./pages/formDemo";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
@@ -28,7 +29,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="finalcheckout" element={<FinalCheckOut />} />
-          {/* <Route path="toast" element={<Toast />} /> */}
+          <Route path="formdemo" element={<MediaQuery />} />
           <Route path="user" element={<User />} >
           <Route path="detail" element={<UserDetail />} />
           <Route path="history" element={<CheckoutHistory />} />

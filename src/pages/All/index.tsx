@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
@@ -6,7 +7,6 @@ import { getAllCart } from "../../redux/cartSlice";
 import { useAppDispatch } from "../../redux/hooks";
 import { getAllCategory, getAllProduct, getTypicalProduct } from "../../redux/productSlice";
 import { getAllUser } from "../../redux/userSlice";
-import { useEffect } from "react";
 function All() {
   const dispatch = useAppDispatch();
   useEffect(() => {

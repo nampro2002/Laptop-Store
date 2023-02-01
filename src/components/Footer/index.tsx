@@ -5,14 +5,14 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 const listCategory = ["acer", "asus", "lenovo", "dell", "hp"];
 function Footer() {
   return (
-    <Box bgcolor="#000">
+    <Box bgcolor="#000" position="relative">
       <Box
         width="85%"
         margin="0 auto"
         display="flex"
         justifyContent="space-between"
         paddingTop="50px"
-        paddingBottom="10px"
+        paddingBottom="10px" 
       >
         <Box marginRight="6%">
           <IconButton
@@ -201,6 +201,25 @@ function Footer() {
             );
           })}
         </Box>
+      </Box>
+      <Box        
+        height="350px"
+        width="100%"
+        sx={{
+          position: "absolute",
+          bottom: "0",
+          right: "0",
+          zIndex: "-1",
+          // borderBottomLeftRadius: "240px",
+        }}
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"
+          alt=""
+          width="100%"
+          height="100%"
+          style={{ clipPath: "polygon(0% 15%, 9% 7%, 25% 20%, 76% 2%, 100% 10%, 100% 12%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%)" }}
+        />
       </Box>
     </Box>
   );

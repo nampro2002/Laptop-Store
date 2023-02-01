@@ -36,23 +36,12 @@ function HeaderCarousel() {
       >
         bgcarosel
       </Box> */}
-      <Box width="78%" margin="0 auto">
+      <Box width="100%" margin="0 auto">
         <Slider {...settings}>
           {listCategory.map((category, index)=>(
           <HeadeCarouselComponent category={category} key={index}/>
           ))}        
-        </Slider>
-        <Box
-          bgcolor="#000"
-          width="4%"
-          height="100%"
-          position="absolute"
-          sx={{
-            top:'0%',
-            left:'9%',
-            transform: "rotate(-7deg)",
-          }}        
-        ></Box>
+        </Slider>        
       </Box>
     </Box>
   );
