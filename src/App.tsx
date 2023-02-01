@@ -1,56 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
-
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import All from "./pages/All";
+import Cart from "./pages/Cart";
+import CheckoutHistory from "./pages/CheckoutHistory";
+import ConfirmCart from "./pages/ConfrimCart";
+import FinalCheckOut from "./pages/FinalCheckOut";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
+import ProductDetail from "./pages/ProductDetail";
+import Products from "./pages/Products";
+import SearchPage from "./pages/Search";
+import SignUp from "./pages/SignUp";
+import User from "./pages/User";
+import UserDetail from "./pages/UserDetail";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Routes>
+        <Route path="/" element={<All />}>
+          <Route path="" element={<Home />} />
+          <Route path="products" element={<Products />} />
+          <Route path="search" element={<SearchPage />} />
+          <Route path="detail" element={<SearchPage />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="confirmcart" element={<ConfirmCart />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route path="finalcheckout" element={<FinalCheckOut />} />
+          {/* <Route path="toast" element={<Toast />} /> */}
+          <Route path="user" element={<User />} >
+          <Route path="detail" element={<UserDetail />} />
+          <Route path="history" element={<CheckoutHistory />} />
+          </Route>
+          <Route path="detail" element={<ProductDetail />}>
+            <Route path="?productId=:productId" element={<ProductDetail />} />
+            <Route index element={<NotFound />} />
+          </Route>
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
